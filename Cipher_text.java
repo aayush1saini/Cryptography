@@ -8,7 +8,6 @@ public class FH_exp {
 		File file= new File("C:\\Users\\name\\Documents\\a.txt"); // get path of input file
 		String original_string="";  // Initialize original string
 		
-		Scanner scn=new Scanner(System.in); 
 		try {
 			
 			Scanner sc= new Scanner(file); // scan file
@@ -21,9 +20,7 @@ public class FH_exp {
 		}
 		
 	finally {
-		System.out.println("Enter min and max values ");  // enter min,max values for random integer
-		int min=scn.nextInt();                            // input min
-		int max=scn.nextInt();							  // input max
+	   	int min=1, max=10;						 
 		System.out.println("ORIGINAL TEXT  "+original_string);
 		
 		int random =ThreadLocalRandom.current().nextInt(min,max); // getting a random number
@@ -38,7 +35,7 @@ public class FH_exp {
 		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\name\\Documents\\b.txt")); // writing output into a text file
 	    writer.write(final_string);
 	    writer.close(); // close BufferedWriter resource
-		scn.close();    // close Scanner resource
+		
 	
 	}
 		
