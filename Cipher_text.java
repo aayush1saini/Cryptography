@@ -5,7 +5,7 @@ public class FH_exp {
 
 	public static void main(String[] args)throws Exception{  // main throws IO exception
 		// TODO Auto-generated method stub
-		File file= new File("C:\\Users\\name\\Documents\\a.txt"); // get path of input file
+		File file= new File("C:\\Users\\name\\Documents\\input.txt"); // get path of input file
 		String original_string="";  // Initialize original string
 		
 		try {
@@ -32,7 +32,7 @@ public class FH_exp {
 		}
 		
 		System.out.println("CIPHER TEXT  "+final_string);
-		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\name\\Documents\\b.txt")); // writing output into a text file
+		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\name\\Documents\\output.txt")); // writing output into a text file
 	    writer.write(final_string);
 	    writer.close(); // close BufferedWriter resource
 		
