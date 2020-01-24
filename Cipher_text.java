@@ -1,3 +1,5 @@
+
+
 import java.util.concurrent.ThreadLocalRandom;
 import java.io.*;
 import java.util.Scanner;
@@ -5,18 +7,23 @@ public class FH_exp {
 
 	public static void main(String[] args)throws Exception{  // main throws IO exception
 		// TODO Auto-generated method stub
-		File file= new File("C:\\Users\\name\\Documents\\input.txt"); // get path of input file
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter name of the file");
+		String input_file=sc.nextLine();
+		sc.close();
+		File file= new File("C:\\Users\\name\\Documents\\"+input_file); // get path of input file
 		String original_string="";  // Initialize original string
 		
 		try {
 			
-			Scanner sc= new Scanner(file); // scan file
-			while(sc.hasNextLine())        // read till file has lines
+			 Scanner scn= new Scanner(file); // scan file
+			while(scn.hasNextLine())        // read till file has lines
 			{
-				original_string+=sc.nextLine();  // get data from file into a string
+				original_string+=scn.nextLine();  // get data from file into a string
 				
 			}
-			sc.close(); // close Scanner resource
+			scn.close();
+		 // close Scanner resource
 		}
 		
 	finally {
@@ -42,4 +49,7 @@ public class FH_exp {
 		
 
 }
+
 }
+   
+
